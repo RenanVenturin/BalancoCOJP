@@ -966,11 +966,11 @@
             </div>
 
             <div class="button-group">
-                <button class="btn-save" onclick="salvarDados()">Salvar Dados</button>
-                <button class="btn-export" onclick="carregarDados()">Carregar Dados Salvos</button>
-                <button class="btn-download" onclick="exportarHTML()">Exportar HTML</button>
-                <button class="btn-reset" onclick="restaurarPadrao()">Restaurar Padrão</button>
-                <button class="btn-reset" onclick="limparDadosLocais()">Limpar Dados Locais</button>
+                <button class="btn-save" onclick="salvarDados()" title="Salva os valores atuais no navegador para manter os dados após fechar ou recarregar a página.">Salvar Dados</button>
+                <button class="btn-export" onclick="carregarDados()" title="Carrega os dados previamente salvos no navegador e atualiza os gráficos e campos.">Carregar Dados Salvos</button>
+                <button class="btn-download" onclick="exportarHTML()" title="Gera e baixa um novo arquivo HTML com os dados atuais como padrão.">Exportar HTML</button>
+                <button class="btn-reset" onclick="restaurarPadrao()" title="Restaura os valores padrão definidos no sistema e substitui os dados atuais.">Restaurar Padrão</button>
+                <button class="btn-reset" onclick="limparDadosLocais()" title="Remove os dados salvos localmente neste navegador e recarrega a página com o padrão.">Limpar Dados Locais</button>
             </div>
         </div>
     </div>
