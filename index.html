@@ -987,12 +987,12 @@
     let dados = {
         dre: {
             receitaBruta: 357411.45,
-            contribuicaoMembros: 357411.45,
+            contribuicaoMembros: 344544.09,
             despesaAdministrativa: 112007.03,
             despesaEvangelizacao: 235087.68,
             despesaSocial: 74420.20,
             despesaFinanceira: 2926.69,
-            receitaFinanceira: 5000.00
+            receitaFinanceira: 12867.36
         },
         patrimonial: {
             ativoTotal: 829437.98,
@@ -1004,8 +1004,8 @@
         },
         fluxo: {
             saldoInicial: 278798.20,
-            recebimentos: 357411.45,
-            receitaAplicacoesFinanceiras: 5000.00,
+            recebimentos: 344544.09,
+            receitaAplicacoesFinanceiras: 12867.36,
             gastos: 424441.60,
             saldoFinal: 211768.05
         }
@@ -1492,28 +1492,28 @@
         if (confirm('Tem certeza que deseja restaurar os valores padrão? Os dados atuais serão perdidos.')) {
             dados = {
                 dre: {
-                    contribuicaoMembros: 357411.45,
-                    receitaFinanceira: 5000.00,
-                    receitaBruta: 362411.45,
-                    despesaAdministrativa: 112007.03,
-                    despesaEvangelizacao: 235087.68,
-                    despesaSocial: 74420.20,
-                    despesaFinanceira: 2926.69
+                    contribuicaoMembros: 0.00,
+                    receitaFinanceira: 0.00,
+                    receitaBruta: 0.00,
+                    despesaAdministrativa: 0.00,
+                    despesaEvangelizacao: 0.00,
+                    despesaSocial: 0.00,
+                    despesaFinanceira: 0.00
                 },
                 patrimonial: {
-                    ativoTotal: 829437.98,
-                    banco: 211768.05,
-                    imobilizado: 617669.93,
-                    imoveis: 523111.90,
-                    moveis: 92252.43,
-                    computadores: 2305.60
+                    ativoTotal: 0.00,
+                    banco: 0.00,
+                    imobilizado: 0.00,
+                    imoveis: 0.00,
+                    moveis: 0.00,
+                    computadores: 0.00
                 },
                 fluxo: {
-                    saldoInicial: 278798.20,
-                    recebimentos: 357411.45,
-                    receitaAplicacoesFinanceiras: 5000.00,
-                    gastos: 424441.60,
-                    saldoFinal: 211768.05
+                    saldoInicial: 0.00,
+                    recebimentos: 0.00,
+                    receitaAplicacoesFinanceiras: 0.00,
+                    gastos: 0.00,
+                    saldoFinal: 0.00
                 }
             };
             localStorage.removeItem('dadosFinanceiros');
@@ -1567,7 +1567,7 @@
         let blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
         let link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
-        link.download = 'Sistema_Financeiro_' + new Date().toISOString().slice(0, 10) + '.html';
+        link.download = 'Balanco_COJP_' + new Date().toISOString().slice(0, 10) + '.html';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
