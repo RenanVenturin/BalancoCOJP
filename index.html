@@ -970,6 +970,7 @@
                 <button class="btn-export" onclick="carregarDados()">Carregar Dados Salvos</button>
                 <button class="btn-download" onclick="exportarHTML()">Exportar HTML</button>
                 <button class="btn-reset" onclick="restaurarPadrao()">Restaurar Padrão</button>
+                <button class="btn-reset" onclick="limparDadosLocais()">Limpar Dados Locais</button>
             </div>
         </div>
     </div>
@@ -1467,6 +1468,17 @@
             mostrarMensagem('Erro ao carregar dados: ' + e.message, 'error');
             carregarFormulario();
             atualizarTela();
+        }
+    }
+
+    // ============= FUNÇÃO LIMPAR DADOS LOCAIS =============
+    function limparDadosLocais() {
+        if (confirm('Deseja limpar os dados salvos localmente neste navegador?')) {
+            localStorage.removeItem('dadosFinanceiros');
+            mostrarMensagem('Dados locais removidos. Recarregando com os valores padrão...', 'success');
+            setTimeout(function() {
+                location.reload();
+            }, 400);
         }
     }
 
